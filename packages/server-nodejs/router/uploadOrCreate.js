@@ -139,7 +139,15 @@ module.exports = ({ config, req, res, handleError }) => {
       config.logger.info(`Create dir ${dirPath} requested by ${getClientIp(req)}`);
 
       return fs.access(parentPath). // Check whether parent exists.
-        then(_ => fs.ensureDir(dirPath)).
+        then(_ => {
+          var driveLink = req.body.driveLink;
+          return (driveLink ? fs.ensureFile(dirPath+'.drive', (err) => {
+            if(err){
+              return handleError(err);
+            }
+            fs.writeFile(dirPath, driveLink, err => handleError(err));
+          }) : fs.ensureDir(dirPath));
+        }).
         then(_ => getResource({
           config,
           parent: reqParentPath,

@@ -130,6 +130,18 @@ async function createFolder(options, parentId, folderName) {
   return request(method, route).send(params)
 }
 
+async function createDriveLink(options, parentId, folderName, driveLink) {
+  const route = `${options.apiRoot}/files`;
+  const method = 'POST';
+  const params = {
+    parentId,
+    name: folderName,
+    driveLink: driveLink,
+    type: 'dir'
+  };
+  return request(method, route).send(params)
+}
+
 function getResourceName(apiOptions, resource) {
   return resource.name;
 }
@@ -164,5 +176,6 @@ export default {
   downloadResources,
   renameResource,
   removeResources,
-  uploadFileToId
+  uploadFileToId,
+  createDriveLink
 };
