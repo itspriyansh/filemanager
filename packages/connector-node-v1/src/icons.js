@@ -7,6 +7,7 @@ const videoFileIcon = icons.ondemandVideo;
 const archiveFileIcon = icons.archive;
 const booksFileIcon = icons.book;
 const unknownFileIcon = icons.insertDriveFile;
+const driveLinkIcon = icons.driveLink;
 
 const defaultFillColor = '#424242';
 const soundFilesExtensions = ['aac', 'aiff', 'flac', 'm4a', 'ogg', 'mp3', 'wav', 'wma'];
@@ -23,6 +24,8 @@ function matchFileExtensions(filename, extensions) {
 export function getIcon(resource) {
   if (resource.type === 'dir') {
     return { svg: dirIcon, fill: defaultFillColor };
+  } else if(resource.type === 'drive'){
+    return { svg: driveLinkIcon, fill: defaultFillColor };
   } else if (matchFileExtensions(resource.name, soundFilesExtensions)) {
     return { svg: soundFileIcon, fill: `#e53935` };
   } else if (matchFileExtensions(resource.name, pictureFilesExtensions)) {

@@ -26,7 +26,7 @@ function handler(apiOptions, actions) {
         const resource = getResource();
         try {
           const resourceChildren = await api.getChildrenForId(apiOptions, { id: resource.id });
-          const alreadyExists = resourceChildren.some(({ name }) => name === folderName);
+          const alreadyExists = resourceChildren.some(({ name }) => name === folderName || name === folderName+'.drive');
 
           if (alreadyExists) {
             return getMessage('fileExist', { name: folderName });

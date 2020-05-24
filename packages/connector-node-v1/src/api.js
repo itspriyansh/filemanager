@@ -135,7 +135,7 @@ async function createDriveLink(options, parentId, folderName, driveLink) {
   const method = 'POST';
   const params = {
     parentId,
-    name: folderName,
+    name: folderName+'.drive',
     driveLink: driveLink,
     type: 'dir'
   };

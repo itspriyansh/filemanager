@@ -16,6 +16,7 @@ export default {
   archive: `<svg  xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" focusable="false"><path d="M41.09 10.45l-2.77-3.36C37.76 6.43 36.93 6 36 6H12c-.93 0-1.76.43-2.31 1.09l-2.77 3.36C6.34 11.15 6 12.03 6 13v25c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4V13c0-.97-.34-1.85-.91-2.55zM24 35L13 24h7v-4h8v4h7L24 35zM10.25 10l1.63-2h24l1.87 2h-27.5z"/></svg>`,
   book: `<svg  xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" focusable="false"><path d="M36 4H12C9.79 4 8 5.79 8 8v32c0 2.21 1.79 4 4 4h24c2.21 0 4-1.79 4-4V8c0-2.21-1.79-4-4-4zM12 8h10v16l-5-3-5 3V8z"/></svg>`,
   insertDriveFile: `<svg  xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" focusable="false"><path d="M12 4C9.79 4 8.02 5.79 8.02 8L8 40c0 2.21 1.77 4 3.98 4H36c2.21 0 4-1.79 4-4V16L28 4H12zm14 14V7l11 11H26z"/></svg>`,
-  warning: ``
+  warning: ``,
+  driveLink: `<img style="width: 25px; height: 25px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAByElEQVRIie3UvWvVUBzG8c/1peKkVYtihYI6ORSsk+Ci4KbooktRQXARVJCC2KmLIv0LXKx0loLgogiiUBdfUBAEob6Nolccql1s45AEjjG55zbpJPeBH4Rznt/zPckJP3rqKdUhzCGJ1FzmXRFtRLsLaF5t9K8EeDIIHcdOLETgk02hg/gZBN7O1ici4AUMNQFPFwKfZuvr8T4Cn64LHcZiIexbsH80Al7ESB3wg4rAzYHnXgR+f7nQgx3C9ge+IX//A2V1uFvoKrzoEHSm4J+IgF9nmVGdigRdy3wncQLr8C7SMxqD9on/rUewBV/wFVuxAafxEEslPR+zA1ZqLAKdyXx3grW7hYwduIRXhd7LoakVPPdLZ+2mikPNY4/0vsYLe9fxuaRnH87jLL5jF34UTVcr3jKvsYoDrc4OndegdKzmNSL9UgmulAXc6gB9g7WBtw83Iwctqxtl4GMV5iUcCHzbMFsDOp99gX/UwvOShqnAsxefakATXCiD5jpeMLcxkO2N4ldN6KzIEGnhWdBwDmukd1MHmEhH6u5O0Fz5XX+QzuVHDaAJLnYDzd/6ZUNYXk90OadzDeNtA+BvPMb25UB7+r/0BydpUaxJSuwLAAAAAElFTkSuQmCC"/>`
 };
 /* eslint-enable */

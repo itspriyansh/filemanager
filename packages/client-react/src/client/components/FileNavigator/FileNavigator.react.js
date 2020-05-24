@@ -308,6 +308,8 @@ class FileNavigator extends Component {
     const isDirectory = rowData.type === 'dir';
     if (isDirectory) {
       this.navigateToDir(id);
+    } else if(rowData.type === 'drive') {
+      window.open(rowData.driveLink);
     }
 
     this.focusView();

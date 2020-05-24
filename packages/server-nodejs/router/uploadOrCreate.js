@@ -141,12 +141,7 @@ module.exports = ({ config, req, res, handleError }) => {
       return fs.access(parentPath). // Check whether parent exists.
         then(_ => {
           var driveLink = req.body.driveLink;
-          return (driveLink ? fs.ensureFile(dirPath+'.drive', (err) => {
-            if(err){
-              return handleError(err);
-            }
-            fs.writeFile(dirPath, driveLink, err => handleError(err));
-          }) : fs.ensureDir(dirPath));
+          return (driveLink ? fs.writeFile(dirPath, driveLink) : fs.ensureDir(dirPath));
         }).
         then(_ => getResource({
           config,

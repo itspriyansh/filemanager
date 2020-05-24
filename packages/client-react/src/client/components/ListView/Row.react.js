@@ -75,6 +75,7 @@ class Row extends Component {
           key={rowData.id}
           role="row"
           style={style}
+          title={rowData.driveLink ? rowData.driveLink : rowData.name}
         >
           {columns}
         </div>

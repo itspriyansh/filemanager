@@ -192,6 +192,10 @@ const getResource = async ({
     }
   };
 
+  if(resource.name.split('.').length > 1 && resource.name.split('.')[resource.name.split('.').length-1]==='drive'){
+    resource.driveLink = fs.readFileSync(path.join(config.fsRoot, userPath), {encoding:'utf8', flag:'r'});
+  }
+
   if (stats.isDirectory()) {
     resource.type = TYPE_DIR;
     resource.capabilities.canListChildren = true;

@@ -36,6 +36,10 @@ function handler(apiOptions, actions) {
             return getMessage('fileExist', { name });
           } else {
             hideDialog();
+            let splits = selectedResources[0].name.split('.');
+            if(splits.length > 1 && splits[splits.length-1]==='drive'){
+              name += '.drive';
+            }
             const result = await api.renameResource(apiOptions, selectedResources[0].id, name);
             const resource = getResource();
             navigateToDir(resource.id, result.body.id, false);
