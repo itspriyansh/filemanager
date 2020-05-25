@@ -18,7 +18,13 @@ function handler(apiOptions, actions) {
 
   const getMessage = getMess.bind(null, apiOptions.locale);
 
-  const selectedResources = getSelectedResources();
+  let selectedResources = getSelectedResources();
+
+  for(let index in selectedResources){
+    if(selectedResources[index].type==='drive'){
+      selectedResources[index].name += '.drive';
+    }
+  }
 
   const dialogFilesText = selectedResources.length > 1 ?
     `${selectedResources.length} ${getMessage('files')}` :
